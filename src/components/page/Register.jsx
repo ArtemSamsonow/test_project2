@@ -4,7 +4,6 @@ import {EMAIL_VALIDATOR, PASSWORD_VALIDATOR, passwordCheckError} from "../../uti
 import Input from "../elements/Input.jsx";
 import Logo from "../elements/Logo.jsx";
 import {signUp} from "../../redux/actions/register.js";
-import {signIn} from "../../redux/actions/login.js";
 import {useDispatch, useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
 import {useState} from "react";
@@ -29,7 +28,6 @@ function Register () {
 
     async function onSubmit (data) {
         await dispatch(signUp(data))
-        await dispatch(signIn(data))
         reset()
     }
 

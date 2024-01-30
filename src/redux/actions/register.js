@@ -1,5 +1,6 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {register} from "../../utilits/api.js";
+import {signIn} from "./login.js";
 
 export const signUp = createAsyncThunk(
     "user/register",
@@ -11,6 +12,7 @@ export const signUp = createAsyncThunk(
                 throw new Error('Ошибка при регистрации')
             }
 
+            await thunkAPI.dispatch(signIn(user))
             return response.data;
 
         } catch (error) {
