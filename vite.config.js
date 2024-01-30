@@ -7,7 +7,23 @@ export default defineConfig({
   base: '/<REPO>/',
   build: {
     rollupOptions: {
-      input: './src/main.jsx',
+      input: './src/App.jsx',
     },
+  },
+  optimizeDeps: {
+    include: [
+      '@reduxjs/toolkit',
+      'axios',
+      'react',
+      'react-dom',
+      'react-hook-form',
+      'react-redux',
+      'react-router-dom',
+      '@types/react',
+      '@types/react-dom',
+    ],
+  },
+  server: {
+    port: 8080,
   },
 })
