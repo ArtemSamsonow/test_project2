@@ -9,10 +9,10 @@ function App() {
     return (
         <div className="page">
             <Routes>
-                <Route path="/" element={<ProtectRoute element={<Lending/>}/>}/>
+                <Route path="test_project2/" element={<ProtectRoute element={<Lending/>}/>}/>
 
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/register" element={<Register/>}/>
+                <Route path="test_project2/login" element={<Login/>}/>
+                <Route path="test_project2/register" element={<Register/>}/>
             </Routes>
         </div>
     )
