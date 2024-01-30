@@ -47,7 +47,7 @@ export const userSlice= createSlice({
             .addCase(signIn.fulfilled, (state) => {
                 state.loading = false
                 state.error = ''
-                window.location.replace('/')
+                window.location.replace('/test_project2/')
             })
             .addCase(signIn.rejected, (state, action) => {
                 state.loading = false

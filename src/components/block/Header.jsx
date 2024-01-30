@@ -6,7 +6,7 @@ function Header () {
 
     function exit () {
         document.cookie = `token= ; path=/; max-age=0`
-        window.location.replace('/login')
+        window.location.replace('/test_project2/login')
     }
 
     return (
