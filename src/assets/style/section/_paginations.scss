@@ -1,0 +1,42 @@
+.pagination__users{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  .page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid $blue-button;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover .page__number{
+      color: $white;
+    }
+    &:hover {
+      background-color: $blue-button-hover;
+    }
+
+    .page__number{
+      font-size: 30px;
+      cursor: pointer;
+      color: $blue-button;
+      margin: 0;
+      text-align: center;
+
+    }
+    .page__number_active{
+      color: $white;
+    }
+  }
+  .page_active{
+    background-color: $blue-button-hover;
+  }
+
+}

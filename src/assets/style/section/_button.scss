@@ -1,0 +1,22 @@
+.button{
+  width: 100%;
+  border-radius: 6px;
+  background-color: $blue-button;
+  border: 0px;
+  padding: 10px 24px;
+  color: $white;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover{
+    background-color: $blue-button-hover;
+  }
+}
+
+.small {
+  max-width: 100px;
+}
+.max {
+  margin-top: 20px;
+  width: 100%;
+}
