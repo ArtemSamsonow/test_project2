@@ -20,6 +20,7 @@ export const userSlice= createSlice({
 
     extraReducers(builder) {
         builder
+            ///// getUsersAccount
             .addCase(getUsersAccount.pending, (state) => {
                 state.loading = true
             })
@@ -33,8 +34,7 @@ export const userSlice= createSlice({
                 state.loading = false
                 state.error = 'error'
             })
-
-
+            ///// signUp
             .addCase(signUp.fulfilled, (state) => {
                 state.loading = false
                 state.error = ''
@@ -43,7 +43,7 @@ export const userSlice= createSlice({
                 state.loading = false
                 state.error = action.payload
             })
-
+            ///// signIn
             .addCase(signIn.fulfilled, (state) => {
                 state.loading = false
                 state.error = ''
@@ -56,7 +56,5 @@ export const userSlice= createSlice({
 
     }
 })
-
-// export const {} = userSlice.actions
 
 export default userSlice.reducer
